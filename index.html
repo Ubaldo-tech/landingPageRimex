@@ -769,9 +769,316 @@
             margin-top: 0.3rem;
         }
 
+        /* ─── WEB SECTION ─── */
+        .web-section {
+            background: var(--white);
+            position: relative;
+        }
+
+        .web-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+        }
+
+        .web-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.25fr;
+            gap: 5rem;
+            align-items: center;
+            margin-top: 4rem;
+        }
+
+        .web-features-list {
+            list-style: none;
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.9rem;
+        }
+
+        .web-features-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 0.88rem;
+            color: var(--text);
+            font-weight: 400;
+        }
+
+        .web-features-list li i {
+            color: var(--gold-dark);
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+
+        .web-note {
+            margin-top: 2rem;
+            font-size: 0.82rem;
+            color: var(--muted);
+            font-weight: 300;
+            line-height: 1.75;
+            padding: 1.1rem 1.3rem;
+            background: var(--warm);
+            border-radius: 12px;
+            border-left: 3px solid var(--gold-light);
+        }
+
+        .web-note strong {
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        /* Browser Mockup */
+        .web-browser {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(26, 20, 18, 0.1), 0 2px 6px rgba(26, 20, 18, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            transition: transform 0.6s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .web-browser:hover {
+            transform: translateY(-6px);
+        }
+
+        .web-browser-bar {
+            background: #f7f5f2;
+            padding: 11px 16px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .web-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .web-dot:nth-child(1) { background: #f0b8b6; }
+        .web-dot:nth-child(2) { background: #f0dca0; }
+        .web-dot:nth-child(3) { background: #b8deb8; }
+
+        .web-browser-url {
+            flex: 1;
+            margin-left: 10px;
+            background: var(--white);
+            border-radius: 8px;
+            padding: 6px 14px;
+            font-size: 0.68rem;
+            color: var(--muted);
+            font-family: 'DM Sans', sans-serif;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .web-browser-body {
+            overflow: hidden;
+        }
+
+        .wm-slider {
+            height: 105px;
+            background: linear-gradient(135deg, var(--blush-light) 0%, var(--warm) 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            position: relative;
+        }
+
+        .wm-slider-badge {
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(4px);
+            padding: 3px 9px;
+            border-radius: 4px;
+            font-size: 0.5rem;
+            font-weight: 700;
+            color: var(--blush-dark);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .wm-slider-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .wm-slider-sub {
+            width: 72px;
+            height: 4px;
+            background: rgba(26, 20, 18, 0.1);
+            border-radius: 2px;
+        }
+
+        .wm-nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            padding: 8px 12px;
+            background: var(--white);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .wm-nav-item {
+            width: 30px;
+            height: 4px;
+            background: #e8e3dc;
+            border-radius: 2px;
+        }
+
+        .wm-nav-item.active {
+            background: var(--ink);
+            width: 36px;
+        }
+
+        .m-section {
+            padding: 14px 16px;
+        }
+
+        .wm-label {
+            font-size: 0.5rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold-dark);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .wm-label::before {
+            content: '';
+            width: 8px;
+            height: 1.5px;
+            background: var(--gold);
+            border-radius: 1px;
+        }
+
+        .wm-stylists {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .wm-stylist {
+            width: 52px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .wm-stylist-img {
+            width: 42px;
+            height: 52px;
+            border-radius: 10px;
+            background: #ede8e1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wm-stylist-img::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 16px;
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .wm-stylist-name {
+            width: 34px;
+            height: 4px;
+            background: #ddd7cf;
+            border-radius: 2px;
+        }
+
+        .wm-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            margin-bottom: 16px;
+        }
+
+        .wm-gallery-item {
+            aspect-ratio: 1;
+            border-radius: 6px;
+            background: #ede8e1;
+        }
+
+        .wm-gallery-item:nth-child(2) { background: #e8e2da; }
+        .wm-gallery-item:nth-child(4) { background: #f0ebe4; }
+        .wm-gallery-item:nth-child(6) { background: #e5dfd7; }
+
+        .wm-blog {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+
+        .wm-blog-card {
+            height: 42px;
+            border-radius: 8px;
+            background: #f2eeea;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wm-blog-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 14px;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .wm-cta {
+            background: var(--ink);
+            margin: 0 16px 16px;
+            padding: 11px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .wm-cta-text {
+            width: 76px;
+            height: 6px;
+            background: var(--gold-light);
+            border-radius: 3px;
+        }
+
+        .wm-cta-icon {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--blush);
+            flex-shrink: 0;
+        }
+
         /* ─── PRICING ─── */
         .pricing-section {
-            background: var(--white);
+            background: var(--warm);
             position: relative;
         }
 
@@ -919,6 +1226,10 @@
             flex-shrink: 0;
         }
 
+        .plan-card.featured .plan-feat-icon {
+            color: var(--gold);
+        }
+
         .btn-plan {
             width: 100%;
             padding: 0.95rem;
@@ -1019,7 +1330,7 @@
         }
 
         .faq-item.open .faq-answer {
-            max-height: 220px;
+            max-height: 260px;
             padding-top: 1rem;
         }
 
@@ -1200,6 +1511,11 @@
             animation: float 6s ease-in-out infinite;
         }
 
+        .float-anim-delayed {
+            animation: float 6s ease-in-out infinite;
+            animation-delay: -3s;
+        }
+
         /* ─── RESPONSIVE ─── */
         @media (max-width: 960px) {
             .hero {
@@ -1229,6 +1545,15 @@
             .why-grid {
                 grid-template-columns: 1fr;
                 gap: 3rem;
+            }
+
+            .web-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .web-features-list {
+                grid-template-columns: 1fr;
             }
 
             .pricing-grid {
@@ -1278,6 +1603,19 @@
             .section {
                 padding: 5rem 1.5rem;
             }
+
+            .wm-stylists {
+                gap: 6px;
+            }
+
+            .wm-stylist {
+                width: 44px;
+            }
+
+            .wm-stylist-img {
+                width: 36px;
+                height: 44px;
+            }
         }
     </style>
 </head>
@@ -1288,6 +1626,7 @@
         <button class="mobile-close" onclick="closeMobileMenu()"><i class='bx bx-x'></i></button>
         <a href="#funciones" onclick="closeMobileMenu()">Funciones</a>
         <a href="#testimonios" onclick="closeMobileMenu()">Testimonios</a>
+        <a href="#tu-web" onclick="closeMobileMenu()">Tu Web</a>
         <a href="#planes" onclick="closeMobileMenu()">Planes</a>
         <a href="#preguntas" onclick="closeMobileMenu()">FAQ</a>
         <a href="https://wa.me/+595984715050" target="_blank" style="color: var(--blush-dark);">Escribinos por WhatsApp</a>
@@ -1302,6 +1641,7 @@
         <ul class="nav-links">
             <li><a href="#funciones">Funciones</a></li>
             <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#tu-web">Tu Web</a></li>
             <li><a href="#planes">Planes</a></li>
             <li><a href="#preguntas">FAQ</a></li>
             <li><a href="#planes" class="btn-nav">Empezar Gratis</a></li>
@@ -1314,12 +1654,12 @@
         <div class="hero-left">
             <div class="hero-eyebrow">Diseñado para tu salón</div>
             <h1 class="hero-title">Tu negocio merece organizarse con la misma <em>elegancia</em> con la que atendés.</h1>
-            <p class="hero-subtitle">Dejá de perder tiempo con libretas y mensajes desordenados. RIMEX cuida tus turnos, avisa a tus clientas y te da el control que necesitás — para que vos te enfoques en lo que hacés mejor.</p>
+            <p class="hero-subtitle">Dejá de perder tiempo con libretas y mensajes desordenados. RIMEX te da tu propia web con reservas online, cuida tus turnos y te pone el control en las manos — para que vos te enfoques en lo que hacés mejor.</p>
             <div class="hero-cta-group">
                 <a href="https://wa.me/+595984715050?text=Hola,%20quiero%20probar%20RIMEX%20gratis%20por%207%20días" target="_blank" class="btn-primary-hero">
                     <i class='bx bx-rocket'></i> <span>7 Días Gratis</span>
                 </a>
-                <a href="#funciones" class="btn-ghost-hero">Ver cómo funciona</a>
+                <a href="#tu-web" class="btn-ghost-hero">Ver tu web incluida</a>
             </div>
             <div class="hero-stats">
                 <div>
@@ -1398,7 +1738,7 @@
                     <div class="testimonial-stars">
                         <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
                     </div>
-                    <p class="testimonial-text">Antes vivía con la libreta al lado del teléfono. Ahora mis clientas reservan solas y yo tengo todo organizado. Me siento más profesional.</p>
+                    <p class="testimonial-text">Antes vivía con la libreta al lado del teléfono. Ahora mis clientas reservan solas desde mi web y yo tengo todo organizado. Me siento más profesional.</p>
                     <div class="testimonial-author">
                         <img src="https://picsum.photos/seed/salon-lucia/88/88.jpg" alt="Lucía" class="testimonial-avatar">
                         <div>
@@ -1479,23 +1819,55 @@
         </div>
     </section>
 
+    <!-- TU WEB INCLUIDA -->
+    <section id="tu-web" class="section web-section">
+        <div class="container">
+            <div class="web-grid">
+                <div class="reveal">
+                    <div class="section-label">Tu web incluida</div>
+                    <h2 class="section-title">Cada salón tiene su propia página web.<br>Sin costo extra.</h2>
+                    <p class="section-sub" style="margin-top:1rem;">Tus clientas reservan desde tu web. Vos controlás todo desde el panel: galería, blog, estilistas, slider y datos de tu negocio.</p>
+                    <ul class="web-features-list">
+                        <li><i class='bx bx-check'></i> Slider / banner editable</li>
+                        <li><i class='bx bx-check'></i> Fichas de estilistas</li>
+                        <li><i class='bx bx-check'></i> Galería de trabajos</li>
+                        <li><i class='bx bx-check'></i> Blog con notas y novedades</li>
+                        <li><i class='bx bx-check'></i> Datos de tu empresa</li>
+                        <li><i class='bx bx-check'></i> Reservas online integradas</li>
+                    </ul>
+                    <div class="web-note">
+                        <strong>Todo se maneja desde tu panel.</strong> Subís fotos, editás textos, cambiás el slider y actualizás horarios sin tocar una línea de código. Nosotras nos encargamos de la parte técnica.
+                    </div>
+                </div>
+                <div class="reveal reveal-delay-2">
+                    <div class="web-browser float-anim-delayed">
+                        <img src="img/web-mockup.png" alt="Mockup de la página web que se incluye con RIMEX" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 16px 40px rgba(26, 20, 18, 0.1);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- PRICING -->
     <section id="planes" class="section pricing-section">
         <div class="container">
             <div class="reveal" style="text-align:center;">
                 <div class="section-label" style="justify-content:center;">Planes</div>
                 <h2 class="section-title">Un precio claro,<br>sin letras chicas.</h2>
-                <p class="section-sub" style="margin:0.5rem auto 0; text-align:center;">Sin contratos que te atan. Cancelás cuando quieras, sin preguntas.</p>
+                <p class="section-sub" style="margin:0.5rem auto 0; text-align:center;">Sin contratos que te atan. Cancelás cuando quieras, sin preguntas. Tu web incluida en todos los planes.</p>
             </div>
             <div class="pricing-grid">
                 <div class="plan-card featured reveal reveal-delay-2">
                     <div class="plan-name">Profesional</div>
                     <div class="plan-price">Gs 220.000</div>
-                    <div class="plan-period">por mes</div>
+                    <div class="plan-period">por mes · tu web incluida</div>
                     <div class="plan-divider"></div>
                     <ul class="plan-features">
                         <li><i class='bx bx-check plan-feat-icon'></i> Profesionales ilimitados</li>
                         <li><i class='bx bx-check plan-feat-icon'></i> Asignación automática de turnos</li>
+                        <li><i class='bx bx-check plan-feat-icon'></i> Tu web con reservas online</li>
+                        <li><i class='bx bx-check plan-feat-icon'></i> Galería, blog y fichas de estilistas</li>
+                        <li><i class='bx bx-check plan-feat-icon'></i> Slider y datos de tu empresa</li>
                         <li><i class='bx bx-check plan-feat-icon'></i> Estadísticas y ganancias</li>
                         <li><i class='bx bx-check plan-feat-icon'></i> Control de auditoría</li>
                         <li><i class='bx bx-check plan-feat-icon'></i> Soporte prioritario por WhatsApp</li>
@@ -1517,10 +1889,17 @@
             <div class="faq-list reveal">
                 <div class="faq-item">
                     <div class="faq-question">
-                        ¿Necesito saber algo de tecnología para usarlo?
+                        ¿Cómo es la página web que viene incluida?
                         <div class="faq-toggle"><i class='bx bx-plus'></i></div>
                     </div>
-                    <div class="faq-answer">Para nada. Nosotras lo configuramos todo por vos. Te damos tu usuario y contraseña, entrás a la web y empezás a trabajar. Es tan fácil como usar Instagram o WhatsApp.</div>
+                    <div class="faq-answer">Cada salón recibe su propia dirección web, donde tus clientas pueden ver tus estilistas, explorar tu galería de trabajos, leer tu blog y reservar turnos directamente. Vos controlás todo desde el panel: subís fotos, editás textos, cambiás el slider y actualizás los datos de tu negocio. Sin pagar nada extra, viene con tu suscripción.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        ¿Necesito saber algo de tecnología para usarla?
+                        <div class="faq-toggle"><i class='bx bx-plus'></i></div>
+                    </div>
+                    <div class="faq-answer">Para nada. Nosotros configuramos todo por vos. Te damos tu usuario y contraseña, entrás a la web y empezás a trabajar. Para modificar tu página pública, usás el mismo panel con el que gestionás los turnos. Es tan fácil como usar Instagram o WhatsApp.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
@@ -1548,7 +1927,7 @@
                         ¿Mis clientas necesitan descargar alguna app?
                         <div class="faq-toggle"><i class='bx bx-plus'></i></div>
                     </div>
-                    <div class="faq-answer">No. Ellas solo reciben un mensaje de WhatsApp con los datos del turno. No necesitan registrarse ni descargar nada. Cero fricción para ellas.</div>
+                    <div class="faq-answer">No. Ellas entran a tu web desde cualquier navegador, ven tus servicios y reservan. También reciben un mensaje de WhatsApp con los datos del turno. No necesitan registrarse ni descargar nada. Cero fricción para ellas.</div>
                 </div>
             </div>
         </div>
@@ -1559,7 +1938,7 @@
         <div style="position:relative; z-index:2;">
             <span class="cta-label reveal">Empezá hoy</span>
             <h2 class="cta-title reveal">¿Lista para darle a tu salón<br>la <em>organización</em> que merece?</h2>
-            <p class="cta-sub reveal">7 días gratis. Sin datos de pago. Sin compromiso.</p>
+            <p class="cta-sub reveal">7 días gratis. Sin datos de pago. Sin compromiso. Tu web incluida.</p>
             <a href="https://wa.me/+595984715050?text=Hola,%20quiero%20probar%20RIMEX%20gratis%20por%207%20días" target="_blank" class="btn-cta-wa reveal">
                 <i class='bx bxl-whatsapp' style="font-size:1.3rem;"></i> <span>Escribinos por WhatsApp</span>
             </a>
@@ -1572,6 +1951,7 @@
             <p>&copy; <span id="year"></span> <span>INNER TECH</span> — Todos los derechos reservados.</p>
             <div class="footer-links">
                 <a href="#funciones">Funciones</a>
+                <a href="#tu-web">Tu Web</a>
                 <a href="#planes">Planes</a>
                 <a href="#preguntas">FAQ</a>
             </div>
